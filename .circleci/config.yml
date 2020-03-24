@@ -1,0 +1,46 @@
+jobs:
+  build:
+    docker:
+      - image: cibuilds/hugo:latest
+    working_directory: ~/hugo
+    environment:
+      HUGO_BUILD_DIR: ~/hugo/public
+    steps:
+
+      - checkout
+
+      - run: git submodule sync && git submodule update --init
+
+      - run: cd src ;HUGO_ENV=production hugo -v -d /home/circleci/hugo/public;
+      - run:
+          name: test our generated HTML files
+          command: |
+            htmlproofer /home/circleci/hugo/public --allow-hash-href --check-html \
+            --empty-alt-ignore --disable-external
+      - persist_to_workspace: 
+          root: ~/hugo
+          paths: public
+  deploy:
+    docker:
+      - image: 'cimg/python:3.6'
+    steps:
+      - attach_workspace:
+          at: ~/hugo/public
+      - aws-s3/sync:
+          arguments: |
+            --acl public-read \
+            --cache-control "max-age=86400"
+          from: /home/circleci/hugo/public/*
+          overwrite: true
+          to: 's3://dev.appctl.io'
+version: 2.1
+orbs:
+  aws-s3: circleci/aws-s3@1.0.15
+
+workflows:
+  build-test-and-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
