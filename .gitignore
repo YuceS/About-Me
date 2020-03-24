@@ -4,3 +4,6 @@
 # Hugo
 resources/
 public/
+
+#file explorer specific
+.DS_Store
