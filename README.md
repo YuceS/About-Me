@@ -1,3 +1,4 @@
-Online information about me and my portfolio.
+[![YuceS](https://circleci.com/gh/YuceS/About-Me.svg)]
 
-[![YuceS](https://circleci.com/<VCS>/YuceS/About-Me.svg?style=svg)](<LINK>)
+
+Online information about me and my portfolio.
