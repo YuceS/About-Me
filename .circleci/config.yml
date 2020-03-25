@@ -12,6 +12,8 @@ jobs:
       - run: git submodule sync && git submodule update --init
 
       - run: cd src ;HUGO_ENV=production hugo -v -d /home/circleci/hugo/public;
+  test:
+    steps:
       - run:
           name: test our generated HTML files
           command: |
