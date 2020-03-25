@@ -1,9 +1,3 @@
-+++
-weight = 20
-headless = false
-active = true
-align = "l"
-+++
 PROFILE
 ---
 
