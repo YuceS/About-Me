@@ -9,7 +9,7 @@ PROFILE
 
 A certified DevOps engineer with more than 12 years of solution architecture experience for the financial services industry on security, enterprise applications, mainframe and integrations. 
 
-A proven record of [Continuous learning].
+A proven record of Continuous learning.
 
 I can tackle your problem, whatever it is, just reach out to [me](mailto:yuce@appctl.io).
 
