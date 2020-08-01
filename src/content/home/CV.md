@@ -19,7 +19,7 @@ EXPERIENCE
   + Organizational technology standards
   + Software development guidelines,
   + Azure DevOps environment to set up,
-  + RBAC model that fits in the with the platform pipeline output
+  + RBAC model that fits in the with the platform pipeline output.
 + Hands-on DevOps Architect/Leade designing and developing:
   + A cloud platform with Servie mesh(Istio) on Kubernetes(AKS) and integration with Azure services
   + GitOps style ADO(Azure DevOps) build and release pipelines for platform management,
