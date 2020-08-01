@@ -17,8 +17,8 @@ EXPERIENCE
 + Creating the product map for the Azure infrastructure, capturing the requirements, senior stake holder meetings, etc.
 + Technical Architect designing the onboarding process for ever-changing contractor developer resources for the organization:
   + Organizational technology standards
-  + 12 factors to follow uyup as development guidelines
-  + Azure DevOps environment to set up
+  + Software development guidelines,
+  + Azure DevOps environment to set up,
   + RBAC model that fits in the with the platform pipeline output
 + Hands-on DevOps Architect/Leade designing and developing:
   + A cloud platform with Servie mesh(Istio) on Kubernetes(AKS) and integration with Azure services
